@@ -5,9 +5,13 @@ const EmberApp = require('ember-cli/lib/broccoli/ember-app');
 
 module.exports = function(defaults) {
   let app = new EmberApp(defaults, {
-    // Add options here
+    'ember-bootstrap': {
+      'bootstrapVersion': 3,
+      'importBootstrapFont': true,
+      'importBootstrapCSS': true
+    }
   });
-
+  app.import('app/styles/custom-style.css');
   // Use `app.import` to add additional libraries to the generated
   // output files.
   //
