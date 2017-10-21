@@ -1,0 +1,14 @@
+<!--/. NAV TOP  -->
+    <nav class="navbar-default navbar-side" role="navigation">
+        <div class="sidebar-collapse">
+            <ul class="nav" id="main-menu">
+                {{#each lista as |item|}}
+                    <li>
+                        {{#link-to 'inicio.vehiculo' item.v_id }} {{item.v_nombre}} - {{item.v_conductor}} {{/link-to}}
+                    </li>
+                {{/each}}
+            </ul>
+        </div>
+    </nav>
+<!-- /. NAV SIDE  -->
+{{yield}}
