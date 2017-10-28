@@ -8,13 +8,13 @@ module.exports = function(environment) {
     rootURL: '/',
     locationType: 'auto',
 
-    
+
     googleFonts: [
       'Open+Sans:300,400,700',
       'Roboto:300',
       'Material+Icons'
     ],
-    
+
 
 
     EmberENV: {
@@ -35,10 +35,21 @@ module.exports = function(environment) {
 
     contentSecurityPolicy: {
       'font-src': "'self' fonts.gstatic.com",
-      'style-src': "'self' fonts.googleapis.com"
+      'style-src': "'self' 'unsafe-inline' fonts.googleapis.com maps.gstatic.com",
+      'default-src': "'none'",
+      'script-src': "'self' 'unsafe-eval' *.googleapis.com maps.gstatic.com",
+      'connect-src': "'self' maps.gstatic.com",
+      'img-src': "'self' *.googleapis.com maps.gstatic.com csi.gstatic.com",
     }
 
   };
+  // fin de let env
+  ENV.googleMap = {
+    // your configuration goes here
+    'apiKey': "AIzaSyC_lOJg0y5wuRIfRZ-J71ATyGHCM9k5vRM"
+
+  }
+
 
   if (environment === 'development') {
     // ENV.APP.LOG_RESOLVER = true;
