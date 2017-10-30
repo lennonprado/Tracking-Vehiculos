@@ -45,11 +45,8 @@ module.exports = function(environment) {
   };
   // fin de let env
   ENV.googleMap = {
-    // your configuration goes here
-    'apiKey': "AIzaSyC_lOJg0y5wuRIfRZ-J71ATyGHCM9k5vRM"
-
+    apiKey: 'AIzaSyA91jkXC8nRFtBLwAE3mf5KhF19WVlB4SA'
   }
-
 
   if (environment === 'development') {
     // ENV.APP.LOG_RESOLVER = true;

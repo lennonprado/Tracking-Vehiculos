@@ -2,29 +2,14 @@
     <div class="col-md-12 col-sm-12 col-xs-12">
       <div class="card">
         <div class="card-action">
-          <b>User List</b>
+          <b>Mapa</b>
         </div>
       <div class="card-image">
 
-<div class="map-canvas">
-
-  <h1>Welcome to Google Map demo!</h1>
-
-  {{google-map lat=centerLat
-               lng=centerLng
-               zoom=zoom
-               gopt_zoomControl=false
-               type='satellite'}}
-
-  <div class="controls">
-    <label>
-      Zoom:
-      {{input type="range" value=zoom min=0 max=18 step=1}}
-    </label>
-  </div>
 
 
-</div>
+ {{g-maps name="my-map" lat=model.lat lng=model.lng zoom=model.zoom}}
+
 
       </div>
     </div>
