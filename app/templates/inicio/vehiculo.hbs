@@ -16,12 +16,20 @@
     <ul>
 
 			<li>
-				{{#link-to 'inicio.vehiculo' item.v_id 'mapa' class="btn-floating red"}}
+				{{#link-to 'inicio.vehiculo.mapa' model.0.v_id class="btn-floating red"}}
 				<i class="fa fa-map fa-fw"></i> Mapa
 				{{/link-to}}
 			</li>
-			<li><a class="btn-floating blue"><i class="fa fa-calendar fa-fw"></i> Movimientos</a></li>
-			<li><a class="btn-floating green"><i class="fa fa-id-card-o fa-fw"></i> Detalle</a></li>
+			<li>
+				{{#link-to 'inicio.vehiculo.movimiento' model.0.v_id class="btn-floating blue"}}
+				<i class="fa fa-calendar fa-fw"></i> Movimientos
+				{{/link-to}}
+			</li>
+			<li>
+				{{#link-to 'inicio.vehiculo.detalle' model.0.v_id class="btn-floating green"}}
+				<i class="fa fa-id-card-o fa-fw"></i> Detalle
+				{{/link-to}}
+			</li>
     </ul>
   </div>
 	<footer><p>All right reserved. Template by: <a href="https://webthemez.com/admin-template/">WebThemez.com</a></p></footer>
