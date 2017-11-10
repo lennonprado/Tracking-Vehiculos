@@ -14,7 +14,11 @@
             </div>
 
             <ul class="nav navbar-top-links navbar-right">
-				<li><a class="dropdown-button waves-effect waves-dark"><i class="fa fa-map fa-fw"></i> Mapa</a></li>
+				<li>
+          {{#link-to 'inicio.vehiculo' item.v_id 'mapa' class="dropdown-button waves-effect waves-dark"}}  
+          <i class="fa fa-map fa-fw"></i> Mapa
+          {{/link-to}}
+        </li>
 				<li><a class="dropdown-button waves-effect waves-dark"><i class="fa fa-calendar fa-fw"></i> Detalle</a></li>
 				<li><a class="dropdown-button waves-effect waves-dark"><i class="fa fa-id-card-o fa-fw"></i> Información</a></li>
 				<li><a class="dropdown-button waves-effect waves-dark"><i class="fa fa-user fa-fw"></i> <b>John Doe</b> <i class="material-icons right">arrow_drop_down</i></a></li>

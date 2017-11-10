@@ -1,2 +1,6 @@
-soy inicio
+{{#each model as |item|}}
+
+<img src="{{item.v_thumbnail}}" width="100%" />
+{{/each}}
+
 {{outlet}}
