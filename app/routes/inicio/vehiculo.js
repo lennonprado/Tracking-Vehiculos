@@ -6,5 +6,20 @@ export default Route.extend({
     model(params, transition){
         //console.log(params);
         return this.get('ajax').request('http://tracking.bpsistemas.com/api/maquinarias/'+params.id+'&token='+this.get('token'));
+    },
+
+    actions: {
+        togleElements: function () {
+            if($("#menu-fixed-red").hasClass('active')){
+              $('.fixed-action-btn.horizontal ul').animate({visibility: 'visible'});
+              $('ul li a.btn-floating').animate({'opacity' : '0'});
+              $("#menu-fixed-red").removeClass('active');
+            }
+            else{
+              $("#menu-fixed-red").addClass('active');
+              $('.fixed-action-btn.horizontal ul').animate({visibility: 'hidden'});
+              $('ul li a.btn-floating').animate({'opacity' : '100'});
+            }
+        }
     }
 });

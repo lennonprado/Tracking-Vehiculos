@@ -9,15 +9,19 @@
 
 
             <!-- /. ROW  -->
-		<div class="fixed-action-btn horizontal click-to-toggle">
-    <a class="btn-floating btn-large red">
+		<div id="menu-fixed-red" class="fixed-action-btn horizontal click-to-toggle">
+    <a {{ action "togleElements" }} class="btn-floating btn-large red">
       <i class="material-icons">menu</i>
     </a>
     <ul>
-      <li><a  class="btn-floating red"><i class="material-icons">track_changes</i></a></li>
-      <li><a class="btn-floating yellow darken-1"><i class="material-icons">format_quote</i></a></li>
-      <li><a class="btn-floating green"><i class="material-icons">publish</i></a></li>
-      <li><a class="btn-floating blue"><i class="material-icons">attach_file</i></a></li>
+
+			<li>
+				{{#link-to 'inicio.vehiculo' item.v_id 'mapa' class="btn-floating red"}}
+				<i class="fa fa-map fa-fw"></i> Mapa
+				{{/link-to}}
+			</li>
+			<li><a class="btn-floating blue"><i class="fa fa-calendar fa-fw"></i> Movimientos</a></li>
+			<li><a class="btn-floating green"><i class="fa fa-id-card-o fa-fw"></i> Detalle</a></li>
     </ul>
   </div>
 	<footer><p>All right reserved. Template by: <a href="https://webthemez.com/admin-template/">WebThemez.com</a></p></footer>
