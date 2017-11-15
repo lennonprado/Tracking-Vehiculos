@@ -49,3 +49,35 @@ Specify what it takes to deploy your app.
 * Development Browser Extensions
   * [ember inspector for chrome](https://chrome.google.com/webstore/detail/ember-inspector/bmdblncegkenkacieihfhpjfppoconhi)
   * [ember inspector for firefox](https://addons.mozilla.org/en-US/firefox/addon/ember-inspector/)
+
+## Api
+
+api/maquinarias
+api/maquinarias/ID
+api/maquinarias/ID/movimientos
+api/maquinarias/ID/movimientos/ID
+api/maquinarias/ID/movimientos/ID/dispositivos
+api/maquinarias/ID/movimientos/fechaInicio/a/fechaFin
+api/maquinarias/ID/movimientos/fechaInicio/a/fechaFin/dispositivos
+api/maquinarias/ID/dispositivos
+api/movimientos/ID
+api/movimientos
+api/movimientos/fechaInicio/a/fechaFin
+api/movimientos/fechaInicio/a/fechaFin/dispositivos
+api/movimientos/ID/dispositivos
+api/dispositivos
+api/dispositivos/ID
+api/cuentas
+api/cuentas/ID
+api/usuarios/ID
+api/usuarios
+api/cuentas/ID/usuarios
+api/cuentas/ID/usuarios/ID
+api/cuentas/ID/maquinarias
+api/cuentas/ID/maquinarias/ID
+api/cuentas/ID/maquinarias/ID
+api/cuentas/ID/maquinarias/ID/movimientos
+api/cuentas/ID/maquinarias/ID/movimientos/ID
+api/cuentas/ID/maquinarias/ID/movimientos/ID/dispositivos
+api/cuentas/ID/maquinarias/ID/movimientos/fechaInicio/a/fechaFin
+api/cuentas/ID/maquinarias/ID/movimientos/fechaInicio/a/fechaFin/dispositivos  

@@ -6,8 +6,6 @@
 
 
 		{{outlet}}
-
-
             <!-- /. ROW  -->
 		<div id="menu-fixed-red" class="fixed-action-btn horizontal click-to-toggle">
     <a {{ action "togleElements" }} class="btn-floating btn-large red">
@@ -16,17 +14,17 @@
     <ul>
 
 			<li>
-				{{#link-to 'inicio.vehiculo.mapa' model.0.v_id class="btn-floating red"}}
+				{{#link-to 'inicio.vehiculo.mapa' model.data.id class="btn-floating red"}}
 				<i class="fa fa-map fa-fw"></i> Mapa
 				{{/link-to}}
 			</li>
 			<li>
-				{{#link-to 'inicio.vehiculo.movimiento' model.0.v_id class="btn-floating blue"}}
+				{{#link-to 'inicio.vehiculo.movimiento' model.data.id class="btn-floating blue"}}
 				<i class="fa fa-calendar fa-fw"></i> Movimientos
 				{{/link-to}}
 			</li>
 			<li>
-				{{#link-to 'inicio.vehiculo.detalle' model.0.v_id class="btn-floating green"}}
+				{{#link-to 'inicio.vehiculo.detalle' model.data.id class="btn-floating green"}}
 				<i class="fa fa-id-card-o fa-fw"></i> Detalle
 				{{/link-to}}
 			</li>

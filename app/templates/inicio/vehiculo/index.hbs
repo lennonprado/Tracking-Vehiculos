@@ -1,6 +1,4 @@
-{{#each model as |item|}}
 
-<img src="{{item.v_thumbnail}}" width="100%" />
-{{/each}}
+<img src="{{model.data.attributes.v_thumbnail}}" width="100%" />
 
 {{outlet}}
