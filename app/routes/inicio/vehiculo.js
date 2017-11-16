@@ -5,7 +5,7 @@ export default Route.extend({
     ajax: Ember.inject.service(),
     model(params, transition){
         //console.log(params);
-        return this.get('ajax').request('http://tracking.bpsistemas.com/api/maquinarias/'+params.id+'&token='+this.get('token'));
+        return this.get('ajax').request('http://tracking.bpsistemas.com/api/maquinarias/'+params.v_id+'&token='+this.get('token'));
     },
 
     actions: {

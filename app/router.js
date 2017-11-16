@@ -9,13 +9,13 @@ const Router = EmberRouter.extend({
 Router.map(function() {
   this.route('login');
   this.route('inicio', function(){
-    this.route('vehiculo', {path: 'vehiculo/:id'}, function(){
+    this.route('vehiculo', {path: 'vehiculo/:v_id'}, function(){
       this.route('mapa');
       this.route('detalle');
-      this.route('movimiento');  
+      this.route('movimiento');
     });
   });
-  
+
 });
 
 export default Router;
