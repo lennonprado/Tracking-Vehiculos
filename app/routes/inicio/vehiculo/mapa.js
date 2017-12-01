@@ -10,28 +10,59 @@ export default Route.extend({
       let token = '&token='+this.get('token');
       return this.get('ajax').request('http://tracking.bpsistemas.com/api/maquinarias/'+v_id+'/movimientos'+token).then(response => {
           // `response` is the data from the server
-
-          //let lastMove = result._result;
-          //console.log(response.data[0]);
-          //return lastMove;
-
+          var myPolilines = [];
+          response.data.forEach( function(valor, indice, array) {
+            myPolilines.push([response.data[indice].attributes.p_latitud,response.data[indice].attributes.p_longitud]);
+          });
           return {
-                    lat: response.data[0].attributes.p_latitud,
-                    lng: response.data[0].attributes.p_longitud,
-                    zoom: 14
-                  };
-          //return response;
-        });
+                  lat: response.data[0].attributes.p_latitud,
+                  lng: response.data[0].attributes.p_longitud,
+                  zoom: 15,
+                  polylines:[{
+                      id: 'unique-polyline-id', // Recommended
+                      strokeColor: 'blue',
+                      strokeOpacity: 1,
+                      strokeWeight: 3,
+                      path: myPolilines,
+                      click: function(event, polyline) {},
+                      rightclick: function(event, polyline) {},
+                      dblclick: function(event, polyline) {},
+                      mouseover: function(event, polyline) {},
+                      mouseout: function(event, polyline) {},
+                      mouseup: function(event, polyline) {},
+                      mousedown: function(event, polyline) {},
+                      mousemove: function(event, polyline) {},
+                      set_at: function(polylinePath) {},
+                      insert_at: function(polylinePath) {},
+                      remove_at: function(polylinePath) {}
+                    }
+                  ],
+                  markers:[
+                    {
+                      id: 'unique-marker-id',  // Recommended
+                      lat: response.data[0].attributes.p_latitud,
+                      lng: response.data[0].attributes.p_longitud,
+                      infoWindow: {
+                        content: '<p>Posicion actual</p>',
+                        visible: false
+                      },
+                      click(event, marker) {},
+                      rightclick(event, marker) {},
+                      dblclick(event, marker) {},
+                      mouseover(event, marker) {},
+                      mouseout(event, marker) {},
+                      mouseup(event, marker) {},
+                      mousedown(event, marker) {},
+                      drag(e, marker) {},
+                      dragstart(e, marker) {},
+                      dragend(e, marker) {}
+                    }
+                  ]
+              };
+  //return response;
+});
 
 
-/*    return {
-          lat: -33.75494243654723,
-          lng: -55.8359375,
-          zoom: 4
-        };
-
-        */
-    // return this.get('ajax').request('http://tracking.bpsistemas.com/api/maquinarias/&token='+this.get('token'));
   }
 
 });
