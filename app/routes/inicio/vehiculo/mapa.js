@@ -12,7 +12,9 @@ export default Route.extend({
           // `response` is the data from the server
           var myPolilines = [];
           response.data.forEach( function(valor, indice, array) {
-            myPolilines.push([response.data[indice].attributes.p_latitud,response.data[indice].attributes.p_longitud]);
+            
+            if(response.data[indice].attributes.p_alarm == 'tracker')
+              myPolilines.push([response.data[indice].attributes.p_latitud,response.data[indice].attributes.p_longitud]);
           });
           return {
                   lat: response.data[0].attributes.p_latitud,
